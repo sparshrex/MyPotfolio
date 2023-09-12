@@ -1,43 +1,50 @@
 import React from "react";
 import CryptoDetective from "../assets/portfolio/CryptoDetective.jpg";
 
-import navbar from "../assets/portfolio/navbar.jpg";
+// import navbar from "../assets/portfolio/navbar.jpg";
 
 import TextAnalyzer from "../assets/portfolio/TextAnalyzer.jpg";
+import Mypotfolio from "../assets/portfolio/Potfolio.png";
 import NewsXpress from "../assets/portfolio/NewsXpress.jpg";
-import Web3NobilityPublicFunding from "../assets/portfolio/Web3NobilityPublicFunding.jpg"
+import Web3NobilityPublicFunding from "../assets/portfolio/Web3NobilityPublicFunding.jpg";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: CryptoDetective,
-      name:"CryptoDetective"
+      name: "CryptoDetective",
+      demo: "https://crypto-detective.netlify.app/",
     },
     {
       id: 2,
       src: Web3NobilityPublicFunding,
-      name:"Web3NobilityPublicFunding"
+      name: "Web3NobilityPublicFunding",
+      demo: "",
     },
     {
       id: 3,
-      src: NewsXpress,
-      name:"NewsXpress"
+      src: Mypotfolio,
+      name: "Potfolio",
+      demo: "",
     },
     {
       id: 4,
-      src: navbar,
-      name:"Navbar"
+      src: NewsXpress,
+      name: "NewsXpress",
+      demo: "",
     },
     {
       id: 5,
       src: TextAnalyzer,
-      name:"TextAnalyzer"
+      name: "TextAnalyzer",
+      demo: "",
     },
     {
       id: 6,
       src: "",
-      name:"Upcoming "
+      name: "Upcoming ",
+      demo: "",
     },
   ];
 
@@ -55,11 +62,9 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          
-          {portfolios.map(({ id, src ,name}) => (
-            
+          {portfolios.map(({ id, src, name, demo }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-            <h1 className="mb-2 font-extrabold">{name} </h1>
+              <h1 className="mb-2 font-extrabold">{name} </h1>
               <img
                 src={src}
                 alt=""
@@ -67,14 +72,15 @@ const Portfolio = () => {
               />
               <div className=" flex items-center justify-center ">
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
+                  <a href={demo} target="_blank">
+                    Demo
+                  </a>
                 </button>
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Code
                 </button>
               </div>
             </div>
-            
           ))}
         </div>
       </div>

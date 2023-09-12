@@ -4,8 +4,9 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
-import nextjs from "../assets/nextjs.png";
-import graphql from "../assets/graphql.png";
+import Cpp from "../assets/C++.png";
+import Sql from "../assets/Sql.png"
+import Express from "../assets/Express.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
 
@@ -13,8 +14,8 @@ const Experience = () => {
   const techs = [
     {
       id: 1,
-      src: html,
-      title: "HTML",
+      src: Cpp,
+      title: "C++",
       style: "shadow-orange-500",
     },
     {
@@ -43,18 +44,24 @@ const Experience = () => {
     },
     {
       id: 6,
-      src: nextjs,
-      title: "Next JS",
+      src: html,
+      title: "HTML",
       style: "shadow-white",
     },
     {
       id: 7,
-      src: graphql,
-      title: "GraphQL",
+      src: Sql,
+      title: "Sql",
       style: "shadow-pink-400",
     },
     {
       id: 8,
+      src: Express,
+      title: "Express Js",
+      style: "shadow-sky-400",
+    },
+    {
+      id: 9,
       src: github,
       title: "GitHub",
       style: "shadow-gray-400",
